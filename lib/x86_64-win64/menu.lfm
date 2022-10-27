@@ -1,0 +1,68 @@
+object menu_inicial: Tmenu_inicial
+  Left = 64
+  Height = 444
+  Top = 2
+  Width = 946
+  BorderStyle = bsSingle
+  Caption = 'SPOTIFY 2'
+  ClientHeight = 444
+  ClientWidth = 946
+  Color = 16711808
+  LCLVersion = '2.2.4.0'
+  object Label1: TLabel
+    Left = 104
+    Height = 15
+    Top = 56
+    Width = 46
+    Caption = 'Spotify 2'
+    Color = clInfoBk
+    ParentColor = False
+    Transparent = False
+  end
+  object btn_cadastra_artista: TButton
+    Left = 464
+    Height = 33
+    Top = 48
+    Width = 131
+    Caption = 'Artista'
+    OnClick = btn_cadastra_artistaClick
+    TabOrder = 0
+  end
+  object btn_cadastra_musica: TButton
+    Left = 608
+    Height = 33
+    Top = 48
+    Width = 131
+    Caption = 'Música'
+    OnClick = btn_cadastra_musicaClick
+    TabOrder = 1
+  end
+  object Filme: TButton
+    Left = 752
+    Height = 33
+    Top = 48
+    Width = 131
+    Caption = 'Filme'
+    OnClick = FilmeClick
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 15
+    Top = 88
+    Width = 291
+    Caption = 'Cadastre seus artistas, músicas, filme e séries preferidos'
+    Color = clWhite
+    ParentColor = False
+    Transparent = False
+  end
+  object Button1: TButton
+    Left = 464
+    Height = 32
+    Top = 88
+    Width = 128
+    Caption = 'Série'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+end

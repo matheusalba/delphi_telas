@@ -1,0 +1,114 @@
+inherited Form3: TForm3
+  Left = 229
+  Top = 267
+  Caption = 'Artista'
+  Color = clGradientActiveCaption
+  OnCreate = FormCreate
+  inherited PageControl1: TPageControl
+    Left = 8
+    ActivePage = TabSheet2
+    TabIndex = 1
+    inherited TabSheet1: TTabSheet
+      Caption = 'Artistas'
+      ClientHeight = 372
+      ClientWidth = 896
+      object DBGrid1: TDBGrid[0]
+        Left = 10
+        Height = 238
+        Top = 10
+        Width = 872
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'nome'
+            FieldName = 'nome'
+          end        
+          item
+            Title.Caption = 'tipo'
+            FieldName = 'tipo'
+          end>
+        DataSource = DataSource1
+        TabOrder = 0
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 372
+      ClientWidth = 896
+      object DBEdit1: TDBEdit[0]
+        Left = 0
+        Height = 23
+        Top = 40
+        Width = 264
+        DataField = 'nome'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object Label1: TLabel[1]
+        Left = 0
+        Height = 15
+        Top = 24
+        Width = 33
+        Caption = 'Nome'
+        ParentColor = False
+      end
+      object Label2: TLabel[2]
+        Left = 0
+        Height = 15
+        Top = 96
+        Width = 23
+        Caption = 'Tipo'
+        ParentColor = False
+      end
+      object Button1: TButton[3]
+        Left = 0
+        Height = 25
+        Top = 344
+        Width = 75
+        Caption = 'Salvar'
+        OnClick = Button1Click
+        TabOrder = 1
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 0
+        Height = 23
+        Top = 112
+        Width = 264
+        DataField = 'tipo'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 2
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = CSVDataset1
+    Left = 792
+    Top = 280
+  end
+  inherited CSVDataset1: TCSVDataset
+    Left = 792
+    Top = 336
+    object CSVDataset1nome: TStringField[0]
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object CSVDataset1tipo: TStringField[1]
+      FieldKind = fkData
+      FieldName = 'tipo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+  end
+end

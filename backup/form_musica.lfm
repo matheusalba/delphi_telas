@@ -1,0 +1,145 @@
+inherited Form11: TForm11
+  Left = 163
+  Top = 177
+  Caption = 'Música'
+  Color = clMenuHighlight
+  OnCreate = FormCreate
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet2
+    TabIndex = 1
+    inherited TabSheet1: TTabSheet
+      Caption = 'Músicas'
+      ClientHeight = 372
+      ClientWidth = 896
+      object DBGrid1: TDBGrid[0]
+        Left = 0
+        Height = 350
+        Top = 10
+        Width = 888
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'musica'
+            FieldName = 'musica'
+          end        
+          item
+            Title.Caption = 'artista'
+            FieldName = 'artista'
+          end        
+          item
+            Title.Caption = 'ano'
+            FieldName = 'ano'
+          end>
+        DataSource = DataSource1
+        TabOrder = 0
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 372
+      ClientWidth = 896
+      object campo_musica: TDBEdit[0]
+        Left = 8
+        Height = 23
+        Top = 24
+        Width = 200
+        DataField = 'musica'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object campo_artista: TDBEdit[1]
+        Left = 8
+        Height = 23
+        Top = 80
+        Width = 200
+        DataField = 'artista'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object Label1: TLabel[2]
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 41
+        Caption = 'Música:'
+        ParentColor = False
+      end
+      object Label2: TLabel[3]
+        Left = 8
+        Height = 15
+        Top = 64
+        Width = 37
+        Caption = 'Artista:'
+        ParentColor = False
+      end
+      object Ano: TLabel[4]
+        Left = 336
+        Height = 15
+        Top = 8
+        Width = 22
+        Caption = 'Ano'
+        ParentColor = False
+      end
+      object campo_ano: TDBEdit[5]
+        Left = 336
+        Height = 23
+        Top = 24
+        Width = 192
+        DataField = 'ano'
+        DataSource = DataSource1
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object btn_salvar: TButton[6]
+        Left = 0
+        Height = 25
+        Top = 344
+        Width = 75
+        Caption = 'Salvar'
+        OnClick = btn_salvarClick
+        TabOrder = 3
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = CSVDataset1
+    Left = 784
+    Top = 352
+  end
+  inherited CSVDataset1: TCSVDataset
+    Left = 784
+    Top = 328
+    object CSVDataset1musica: TStringField[0]
+      FieldKind = fkData
+      FieldName = 'musica'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object CSVDataset1artista: TStringField[1]
+      FieldKind = fkData
+      FieldName = 'artista'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object CSVDataset1ano: TStringField[2]
+      FieldKind = fkData
+      FieldName = 'ano'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+  end
+end

@@ -1,0 +1,93 @@
+inherited Form2: TForm2
+  Left = 255
+  Height = 436
+  Top = 127
+  Caption = 'Filme'
+  ClientHeight = 436
+  Color = clInactiveCaption
+  inherited PageControl1: TPageControl
+    inherited TabSheet1: TTabSheet
+      Caption = 'Filmes'
+      ClientHeight = 372
+      ClientWidth = 896
+      object campo_diretor: TEdit[0]
+        Left = 8
+        Height = 23
+        Top = 24
+        Width = 200
+        TabOrder = 0
+      end
+      object Label1: TLabel[1]
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 36
+        Caption = 'Diretor'
+        ParentColor = False
+      end
+      object Label2: TLabel[2]
+        Left = 8
+        Height = 15
+        Top = 128
+        Width = 29
+        Caption = 'Filme'
+        ParentColor = False
+      end
+      object Label3: TLabel[3]
+        Left = 8
+        Height = 15
+        Top = 64
+        Width = 22
+        Caption = 'Ano'
+        ParentColor = False
+      end
+      object Button1: TButton[4]
+        Left = 0
+        Height = 25
+        Top = 344
+        Width = 75
+        Caption = 'Salvar'
+        OnClick = Button1Click
+        TabOrder = 1
+      end
+      object campo_ano: TEdit[5]
+        Left = 8
+        Height = 23
+        Top = 80
+        Width = 200
+        TabOrder = 2
+      end
+      object campo_filme: TEdit[6]
+        Left = 8
+        Height = 23
+        Top = 144
+        Width = 200
+        TabOrder = 3
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      Caption = 'Lista'
+      ClientHeight = 372
+      ClientWidth = 896
+      object lista_filme: TMemo[0]
+        Left = 10
+        Height = 350
+        Top = 10
+        Width = 870
+        Color = clActiveCaption
+        Lines.Strings = (
+          'lista_filme'
+        )
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    Left = 744
+  end
+  inherited CSVDataset1: TCSVDataset
+    Left = 744
+    Top = 312
+  end
+end

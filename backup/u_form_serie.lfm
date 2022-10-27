@@ -1,0 +1,92 @@
+inherited Form4: TForm4
+  Left = 183
+  Height = 412
+  Top = 175
+  ClientHeight = 412
+  Color = clHighlight
+  inherited PageControl1: TPageControl
+    Left = 8
+    inherited TabSheet1: TTabSheet
+      Caption = 'Séries'
+      ClientHeight = 372
+      ClientWidth = 896
+      object lista_series: TMemo[0]
+        Left = 10
+        Height = 338
+        Top = 10
+        Width = 878
+        Color = 16744448
+        Lines.Strings = (
+          'lista_series'
+        )
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      Caption = 'Cadastrar'
+      ClientHeight = 372
+      ClientWidth = 896
+      object campo_nome: TEdit[0]
+        Left = 8
+        Height = 23
+        Top = 32
+        Width = 192
+        TabOrder = 0
+      end
+      object campo_genero: TEdit[1]
+        Left = 10
+        Height = 23
+        Top = 96
+        Width = 190
+        TabOrder = 1
+      end
+      object campo_ano: TEdit[2]
+        Left = 8
+        Height = 23
+        Top = 160
+        Width = 192
+        TabOrder = 2
+      end
+      object Label1: TLabel[3]
+        Left = 10
+        Height = 15
+        Top = 10
+        Width = 33
+        Caption = 'Nome'
+        ParentColor = False
+      end
+      object Label2: TLabel[4]
+        Left = 10
+        Height = 15
+        Top = 80
+        Width = 38
+        Caption = 'Gênero'
+        ParentColor = False
+      end
+      object Label3: TLabel[5]
+        Left = 10
+        Height = 15
+        Top = 144
+        Width = 22
+        Caption = 'Ano'
+        ParentColor = False
+      end
+      object btn_salvar: TButton[6]
+        Left = 0
+        Height = 25
+        Top = 344
+        Width = 75
+        Caption = 'Salvar'
+        OnClick = btn_salvarClick
+        TabOrder = 3
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    Left = 656
+  end
+  inherited CSVDataset1: TCSVDataset
+    Left = 720
+  end
+end
